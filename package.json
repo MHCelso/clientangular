@@ -1,0 +1,11 @@
+{
+  "name": "clientalliance",
+  "version": "1.0.0",
+  "description": "cliente alliance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Celso",
+  "license": "ISC"
+}
