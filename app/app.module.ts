@@ -1,4 +1,5 @@
 import { NgModule }      from '@angular/core';
+import { HttpModule, JsonpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { routing, appRoutingProviders }  from './app.routes';
@@ -12,6 +13,8 @@ import { DefaultComponent } from './default.component';
   imports:      [
    BrowserModule,
    FormsModule,
+   HttpModule,
+   JsonpModule,
    routing
     ],
   declarations: [

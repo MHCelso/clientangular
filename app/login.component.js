@@ -10,16 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 // importar el nucleo deAngular2
 var core_1 = require('@angular/core');
+var login_service_1 = require('./services/login.service');
 //Decorador Component, indicamos en que etiqueta se va acargar la plantilla
 var LoginComponent = (function () {
-    function LoginComponent() {
+    function LoginComponent(_loginService) {
+        this._loginService = _loginService;
+        this.identificate = "Identificate";
     }
+    LoginComponent.prototype.ngOnInit = function () {
+        console.log(this._loginService.signUp() + '\n');
+    };
     LoginComponent = __decorate([
         core_1.Component({
             selector: 'login',
-            template: '<h1>Formulario Login jkjgjk</h1>'
+            templateUrl: 'app/views/login.html',
+            providers: [login_service_1.LoginService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [login_service_1.LoginService])
     ], LoginComponent);
     return LoginComponent;
 }());

@@ -1,4 +1,13 @@
 body {
-	background-color: #000;
+	background-color: #035AC9;
 	color: #FFFFFF;
+}
+body a{
+	color: #000000;
+}
+body button{
+	color: #FFFFFF;
+	border: none;
+	height: 2em;
+	border-radius: 5px;
 }
