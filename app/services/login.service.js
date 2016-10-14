@@ -13,8 +13,16 @@ require('rxjs/add/operator/map');
 var LoginService = (function () {
     function LoginService() {
     }
-    LoginService.prototype.signUp = function () {
-        return "Hola !!";
+    LoginService.prototype.signUp = function (user_to_login) {
+        // let json = JSON.stringify(user_to_login);
+        // let params = "json" + json;
+        // let headers = new Headers({
+        // 	'Content-Type':'application/x-www-form-urlencode'
+        // });
+        // return this._http.post(
+        // 	this.url + "/get-token/, params, { headers: headers }"
+        // 	)
+        // 	 .map(res => res.json());
     };
     LoginService = __decorate([
         core_1.Injectable(), 

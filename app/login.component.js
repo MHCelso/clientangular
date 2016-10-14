@@ -24,8 +24,20 @@ var LoginComponent = (function () {
         };
     };
     LoginComponent.prototype.onSubmit = function () {
-        alert(this._loginService.signUp() + '\n');
         alert(this.user);
+        // this._loginService.signUp( this.user ).suscribe(  
+        // 	response => {
+        // 		alert(response);
+        // 	}, 
+        // 	error => {
+        // 		this.errorMessage = <any>error;
+        // 		if(this.errorMessage != null)
+        // 		{
+        // 			console.log(this.errorMessage);
+        // 			alert("Error en la petición");
+        // 		}
+        // 	}
+        // 	);
     };
     LoginComponent = __decorate([
         core_1.Component({

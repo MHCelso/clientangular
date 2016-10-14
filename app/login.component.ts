@@ -13,6 +13,7 @@ import { LoginService } from './services/login.service';
 export class LoginComponent implements OnInit {
 	public identificate: string = "Identificate";
 	public user;
+	public errorMessage;
 
 	constructor( private _loginService: LoginService ) { }
 
@@ -24,7 +25,25 @@ export class LoginComponent implements OnInit {
 	}
 
 onSubmit(){
-	alert(this._loginService.signUp()+'\n');
-	alert(this.user);
+
+	alert( this.user );
+
+	// this._loginService.signUp( this.user ).suscribe(  
+
+	// 	response => {
+	// 		alert(response);
+	// 	}, 
+	// 	error => {
+	// 		this.errorMessage = <any>error;
+
+	// 		if(this.errorMessage != null)
+	// 		{
+	// 			console.log(this.errorMessage);
+	// 			alert("Error en la petición");
+	// 		}
+
+	// 	}
+	// 	);
+
 }
 }
