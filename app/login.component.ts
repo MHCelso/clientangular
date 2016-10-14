@@ -12,14 +12,19 @@ import { LoginService } from './services/login.service';
 // Clase del componente donde irán los datos y funcionalidades
 export class LoginComponent implements OnInit {
 	public identificate: string = "Identificate";
+	public user;
 
 	constructor( private _loginService: LoginService ) { }
 
 	ngOnInit(): void {
-		console.log(this._loginService.signUp()+'\n');
+		this.user = {
+			"email": "",
+			"password": ""
+		};
 	}
 
-	// ngOnInit() {
-	// 	alert(this._loginService.signUp);
-	// }
+onSubmit(){
+	alert(this._loginService.signUp()+'\n');
+	alert(this.user);
+}
 }

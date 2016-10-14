@@ -18,7 +18,14 @@ var LoginComponent = (function () {
         this.identificate = "Identificate";
     }
     LoginComponent.prototype.ngOnInit = function () {
-        console.log(this._loginService.signUp() + '\n');
+        this.user = {
+            "email": "",
+            "password": ""
+        };
+    };
+    LoginComponent.prototype.onSubmit = function () {
+        alert(this._loginService.signUp() + '\n');
+        alert(this.user);
     };
     LoginComponent = __decorate([
         core_1.Component({
